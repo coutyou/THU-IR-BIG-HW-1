@@ -5,13 +5,34 @@
 * Python 3
 * Windows 10
 
+## 运行方式
+
+1. **建立索引：**
+
+   `pip install jieba`
+
+   `python make_reverse_index.py`
+
+   **命令行参数：**
+   
+   -g , --gap , gap of skip pointer, type=int，默认为int(L^0.5)
+
+2. **查询：**
+
+   `python main.py`
+
+   **命令行参数：**
+   
+   -s , --skip,  use skip pointer or not, type=bool，默认为True
+
+**查询时需要输入合取范式，AND OR NOT 分别用& | !表示**
+
 ## 文件结构
 
 * utils.py——用于储存用到的数据结构和相关函数
 * make_inverted_index.py——用于构建倒排索引
 * inverted_index.pkl——倒排索引文件
 * main.py——主函数，用于查询
-* README.txt——程序运行方式说明
 * cacm——数据集
 
 ## 已实现功能
